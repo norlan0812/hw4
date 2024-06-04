@@ -1,0 +1,43 @@
+<html>
+<head><meta charset="utf-8">
+
+</head>
+
+<style>
+#header {height:70px;background-color:#725a5a;padding:1em}
+#article {margin:auto; width:90%; height:1000px;background-color:#ddd4d4;padding:1em}
+#footer {height:50px;background-color:#725a5a;padding:1em}
+
+img {
+width:20%;
+height:auto;
+float: right;
+}
+h1 {text-align:center;}
+
+</style>
+<div id="header"><h1>猜數字</h1></div>
+<div id="article"><body>
+<body>
+	<pre><a href="h.w4.html">歲數計算</a></pre>
+	 <pre><a href="h.w4-2.html">履歷表</a></pre>
+	 <pre><a href="h.w4-4.html">地圖</a></pre>
+  	<script language="javascript">
+　var Today=new Date();
+　document.write("今天日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日");
+</script>
+<form>
+請輸入1~100到的數字 : <input type="text" id="number">
+</form>
+<button type="button">Guess!</button>
+<script>
+let target=Math.floor((Math.random() * 100) + 1);
+console.log(target);
+let btn = document.querySelector("button");
+btn.addEventListener("click", function(){
+if(document.getElementById("number").value > target){alert("猜小一些");}
+else if (document.getElementById("number").value < target){alert("猜大一些");}
+else{alert("猜對了!");}
+});
+
+</script></body></html>

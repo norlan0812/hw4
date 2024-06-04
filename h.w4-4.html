@@ -1,0 +1,35 @@
+<html>
+
+<style>
+body {background-image: url("nttu.jpg"); background-size: 1000px, 600px; background-repeat: no-repeat;}
+#animate {background-image: url("map.jpg"); width: 30px; height: 30px; position: absolute; background-size: cover}
+</style>
+	<pre style="text-align: right;"><a href="h.w4.html">歲數計算</a></pre>
+	 <pre style="text-align: right;"><a href="h.w4-2.html">履歷表</a></pre>
+	 <pre style="text-align: right;"><a href="h.w4-3.html">猜數字</a></pre>
+
+
+<body>
+<div id="animate"></div>
+<script>
+let area = document.querySelector("body");
+area.addEventListener("keydown", function(event){
+let elem = document.getElementById("animate");
+let x = elem.offsetLeft || 0;
+let y = elem.offsetTop || 0;
+let key = event.which || event.keyCode;
+switch(key){
+case 38:
+elem.style.top = (y-30) + 'px';
+break;
+case 40:
+elem.style.top = (y+30) + 'px';
+break;
+case 37:
+elem.style.left = (x-30) + 'px';
+break;
+case 39:
+elem.style.left = (x+30) + 'px';
+break;
+}
+});</script></body></html>

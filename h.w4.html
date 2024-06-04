@@ -1,0 +1,63 @@
+<html>
+<head><meta charset="utf-8">
+
+</head>
+
+<style>
+#header {height:70px;background-color:#725a5a;padding:1em}
+#article {margin:auto; width:90%; height:1000px;background-color:#ddd4d4;padding:1em}
+#footer {height:50px;background-color:#725a5a;padding:1em}
+
+img {
+width:20%;
+height:auto;
+float: right;
+}
+h1 {text-align:center;}
+
+</style>
+<div id="header"><h1>歲數計算</h1></div>
+<div id="article">
+<body>
+  <pre><a href="h.w4-2.html">履歷表</a></pre>
+  <pre><a href="h.w4-3.html">猜數字</a></pre>
+  <pre><a href="h.w4-4.html">地圖</a></pre>
+  <script language="javascript">
+　var Today=new Date();
+　document.write("今天日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日");
+</script>
+<p></p>
+<form>
+  請輸入今年西元年: <input type="text"id="nad">
+</form>
+<form>
+請輸入出生西元年: <input type="text"id="ad">
+</form>
+<form>
+請輸入出生月: <input type="text"id="m">
+</form>
+<form>
+請輸入出生日: <input type="text"id="d">
+</form>
+
+<button type="button" onclick="processFormData()">送出</button>
+
+<script type="text/javascript">
+function processFormData() {
+  const adElement = document.getElementById('ad');
+  const ad = adElement.value;
+  const mElement = document.getElementById('m');
+  const m = mElement.value;
+  const dElement = document.getElementById('d');
+  const d = dElement.value;
+  const nadElement = document.getElementById('nad');
+  const nad = nadElement.value;
+  alert('你的生日是 ' + ad + '年 ' + m + '月' + d + '日'+'\n 你今年'+ (nad-ad) +'歲');
+}
+</script>
+<br><br>
+
+
+</body>
+</div>
+</html>
